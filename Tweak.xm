@@ -8,6 +8,10 @@ CGFloat offsetx = 20;
 @property (nonatomic,retain) UIView * conditionsImageView;
 @property (nonatomic,retain) UIView * temperatureLabel; 
 @end
+%ctor
+{
+	NSLog(@"Loading SpotWeather!");
+}
 %hook SBSearchEtceteraIsolatedViewController
 - (_Bool)_deviceSupportsWeatherDisplay
 {
