@@ -1,6 +1,6 @@
 BOOL enabled = YES;
 CGFloat offsety = 20;
-CGFloat offsetx = 20;
+CGFloat offsetx = 0;
 @interface WATodayPadView : UIView
 - (id)initWithFrame:(CGRect)frame;
 @property (nonatomic,retain) UIView * locationLabel;
