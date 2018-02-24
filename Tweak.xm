@@ -33,7 +33,6 @@ static void LoadSettings()
 - (_Bool)_deviceSupportsWeatherDisplay
 {
 	LoadSettings();
-	NSLog(@"FUNCEXEC!!!!!");
 	if(enabled == YES)
 	{
 		return YES;
