@@ -1,7 +1,7 @@
 Package: com.thomtl.spotweather
 Name: spotweather
 Depends: mobilesubstrate
-Version: 0.2.0
+Version: 0.9.0
 Architecture: iphoneos-arm
 Description: A tweak that shows the current weather in the NC!
 Maintainer: thomtl
