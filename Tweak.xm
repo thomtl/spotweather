@@ -2,7 +2,6 @@ static BOOL enabled = YES;
 static CGFloat offsety = 20;
 static CGFloat offsetx = 0;
 @interface WATodayPadView : UIView
-- (id)initWithFrame:(CGRect)frame;
 @property (nonatomic,retain) UIView * locationLabel;
 @property (nonatomic,retain) UIView * conditionsLabel;
 @property (nonatomic,retain) UIView * conditionsImageView;
