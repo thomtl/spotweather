@@ -1,19 +1,24 @@
 static BOOL enabled = YES;
+
 static CGFloat offsety = 20;
 static CGFloat offsetx = 0;
+
 @interface WATodayPadView : UIView
-@property (nonatomic,retain) UIView * locationLabel;
-@property (nonatomic,retain) UIView * conditionsLabel;
-@property (nonatomic,retain) UIView * conditionsImageView;
-@property (nonatomic,retain) UIView * temperatureLabel; 
+	@property (nonatomic,retain) UIView * locationLabel;
+	@property (nonatomic,retain) UIView * conditionsLabel;
+	@property (nonatomic,retain) UIView * conditionsImageView;
+	@property (nonatomic,retain) UIView * temperatureLabel; 
 @end
+
 static void LoadSettings();
+
 %ctor
 {
 	CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), NULL, (CFNotificationCallback)LoadSettings, CFSTR("com.thomtl.spotweathersettings/settingschanged"), NULL, CFNotificationSuspensionBehaviorCoalesce);
 	LoadSettings();
 	NSLog(@"Loading SpotWeather!");
 }
+
 static void LoadSettings()
 {
     NSMutableDictionary *prefs = [[NSMutableDictionary alloc] initWithContentsOfFile:@"/var/mobile/Library/Preferences/com.thomtl.spotweathersettings.plist"];
@@ -23,10 +28,12 @@ static void LoadSettings()
     }
     [prefs release];
 }
+
 %hook SBSearchEtceteraIsolatedViewController
 - (_Bool)_deviceSupportsWeatherDisplay
 {
 	LoadSettings();
+	NSLog(@"FUNCEXEC!!!!!");
 	if(enabled == YES)
 	{
 		return YES;
