@@ -1,3 +1,5 @@
+#include "Tweak.h"
+
 static BOOL enabled = YES;
 
 static CGFloat offsety = 20;
@@ -9,8 +11,6 @@ static CGFloat offsetx = 0;
 	@property (nonatomic,retain) UIView * conditionsImageView;
 	@property (nonatomic,retain) UIView * temperatureLabel; 
 @end
-
-static void LoadSettings();
 
 %ctor
 {
