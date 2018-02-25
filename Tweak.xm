@@ -25,6 +25,8 @@ static void LoadSettings()
     if(prefs)
     {
         enabled = [[prefs objectForKey:@"enabled"] boolValue];
+	offsetx = (CGFloat)[[prefs objectForKey:@"OffsetX"] doubleValue];
+	offsety = (CGFloat)[[prefs objectForKey:@"OffsetY"] doubleValue];
     }
     [prefs release];
 }
