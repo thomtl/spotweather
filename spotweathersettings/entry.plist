@@ -5,19 +5,30 @@
 	<key>entry</key>
 	<dict>
 		<key>cell</key>
-		<string>PSSwitchCell</string>
-		<key>defaults</key>
-		<string>com.thomtl.spotweathersettings</string>
-		<key>label</key>
-		<string>SpotWeather</string>
-		<key>key</key>
-		<string>enabled</string>
-		<key>default</key>
-		<true/>
+		<string>PSLinkCell</string>
 		<key>icon</key>
 		<string>icon.png</string>
-		<key>PostNotification</key>
-		<string>com.thomtl.spotweathersettings/preferences.changed</string>
+		<key>label</key>
+		<string>SpotWeather</string>
 	</dict>
+	<key>title</key>
+	<string>SpotWeather</string>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>defaults</key>
+			<string>com.thomtl.spotweathersettings</string>
+			<key>key</key>
+			<string>enabled</string>
+			<key>label</key>
+			<string>Enabled</string>
+			<key>default</key>
+			<true/>
+			<key>PostNotification</key>
+			<string>com.thomtl.spotweathersettings/preferences.changed</string>
+		</dict>
+	</array>
 </dict>
 </plist>
