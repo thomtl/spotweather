@@ -32,7 +32,6 @@ static void LoadSettings()
 %hook SBSearchEtceteraIsolatedViewController
 - (_Bool)_deviceSupportsWeatherDisplay
 {
-	LoadSettings();
 	if(enabled == YES)
 	{
 		return YES;
