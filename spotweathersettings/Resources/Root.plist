@@ -6,21 +6,79 @@
 	<array>
 		<dict>
 			<key>cell</key>
-			<string>PSGroupCell</string>
-			<key>label</key>
-			<string>spotweathersettings First Page</string>
-		</dict>
-		<dict>
-			<key>cell</key>
 			<string>PSSwitchCell</string>
-			<key>default</key>
-			<true/>
 			<key>defaults</key>
 			<string>com.thomtl.spotweathersettings</string>
 			<key>key</key>
-			<string>AwesomeSwitch1</string>
+			<string>enabled</string>
 			<key>label</key>
-			<string>Awesome Switch 1</string>
+			<string>Enabled</string>
+			<key>default</key>
+			<true/>
+			<key>PostNotification</key>
+			<string>com.thomtl.spotweathersettings/preferences.changed</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSStaticTextCell</string>
+			<key>label</key>
+			<string>The Y Offset of the weather object.</string>
+		</dict>
+		<dict>
+			<key>showValue</key>
+			<true/>
+			<key>max</key>
+			<integer>100</integer>
+			<key>min</key>
+			<integer>0</integer>
+			<key>PostNotification</key>
+			<string>com.thomtl.spotweathersettings/preferences.changed</string>
+			<key>cell</key>
+			<string>PSSliderCell</string>
+			<key>default</key>
+			<real>60</real>
+			<key>defaults</key>
+			<string>com.thomtl.spotweathersettings</string>
+			<key>key</key>
+			<string>OffsetY</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSStaticTextCell</string>
+			<key>label</key>
+			<string>The X Offset of the weather object.</string>
+		</dict>
+		<dict>
+			<key>showValue</key>
+			<true/>
+			<key>max</key>
+			<integer>100</integer>
+			<key>min</key>
+			<integer>0</integer>
+			<key>PostNotification</key>
+			<string>com.thomtl.spotweathersettings/preferences.changed</string>
+			<key>cell</key>
+			<string>PSSliderCell</string>
+			<key>default</key>
+			<real>20</real>
+			<key>defaults</key>
+			<string>com.thomtl.spotweathersettings</string>
+			<key>key</key>
+			<string>OffsetX</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSStaticTextCell</string>
+			<key>label</key>
+			<string>Respring To apply changes.</string>
+		</dict>
+		<dict>
+            <key>cell</key>             
+			<string>PSButtonCell</string>
+            <key>label</key>            
+			<string>Respring!</string>
+            <key>action</key>           
+			<string>respring</string>
 		</dict>
 	</array>
 	<key>title</key>

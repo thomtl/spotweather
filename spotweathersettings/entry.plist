@@ -1,96 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>entry</key>
-	<dict>
-		<key>cell</key>
-		<string>PSLinkCell</string>
-		<key>icon</key>
-		<string>icon.png</string>
-		<key>label</key>
-		<string>SpotWeather</string>
-	</dict>
-	<key>title</key>
-	<string>SpotWeather</string>
-	<key>items</key>
-	<array>
-		<dict>
-			<key>cell</key>
-			<string>PSSwitchCell</string>
-			<key>defaults</key>
-			<string>com.thomtl.spotweathersettings</string>
-			<key>key</key>
-			<string>enabled</string>
-			<key>label</key>
-			<string>Enabled</string>
-			<key>default</key>
-			<true/>
-			<key>PostNotification</key>
-			<string>com.thomtl.spotweathersettings/preferences.changed</string>
-		</dict>
-		<dict>
-			<key>cell</key>
-			<string>PSStaticTextCell</string>
-			<key>label</key>
-			<string>The Y Offset of the weather object.</string>
-		</dict>
-		<dict>
-			<key>showValue</key>
-			<true/>
-			<key>max</key>
-			<integer>100</integer>
-			<key>min</key>
-			<integer>0</integer>
-			<key>PostNotification</key>
-			<string>com.thomtl.spotweathersettings/preferences.changed</string>
-			<key>cell</key>
-			<string>PSSliderCell</string>
-			<key>default</key>
-			<real>60</real>
-			<key>defaults</key>
-			<string>com.thomtl.spotweathersettings</string>
-			<key>key</key>
-			<string>OffsetY</string>
-		</dict>
-		<dict>
-			<key>cell</key>
-			<string>PSStaticTextCell</string>
-			<key>label</key>
-			<string>The X Offset of the weather object.</string>
-		</dict>
-		<dict>
-			<key>showValue</key>
-			<true/>
-			<key>max</key>
-			<integer>100</integer>
-			<key>min</key>
-			<integer>0</integer>
-			<key>PostNotification</key>
-			<string>com.thomtl.spotweathersettings/preferences.changed</string>
-			<key>cell</key>
-			<string>PSSliderCell</string>
-			<key>default</key>
-			<real>20</real>
-			<key>defaults</key>
-			<string>com.thomtl.spotweathersettings</string>
-			<key>key</key>
-			<string>OffsetX</string>
-		</dict>
-		<dict>
-			<key>cell</key>
-			<string>PSStaticTextCell</string>
-			<key>label</key>
-			<string>Respring To apply changes.</string>
-		</dict>
-		<dict>
-            		<key>cell</key>             
-			<string>PSButtonCell</string>
-            		<key>label</key>            
-			<string>Respring!</string>
-            		<key>action</key>           
-			<string>respring</string>
-		</dict>
-	</array>
-</dict>
-</plist>
+{
+    entry = {
+	bundle = spotweathersettings;
+	cell = PSLinkCell;
+	detail = SWSRootListController;
+	icon = icon.png;
+	isController = 1;
+	label = SpotWeather;
+    };
+}
