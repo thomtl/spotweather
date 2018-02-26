@@ -5,4 +5,10 @@
         @property (nonatomic,retain) UIView * temperatureLabel;
 @end
 
+@interface FBSystemService
+	+(id)sharedInstance;
+	-(void)exitAndRelaunch:(BOOL)arg1;
+@end
+
 static void LoadSettings();
+static void RespringDevice();

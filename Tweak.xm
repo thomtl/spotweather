@@ -7,11 +7,15 @@ static CGFloat offsetX = 0;
 
 %ctor
 {
+	CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), NULL, (CFNotificationCallback)RespringDevice, CFSTR("com.thomtl.spotweathersettings/respring"), NULL, CFNotificationSuspensionBehaviorDeliverImmediately);
 	CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), NULL, (CFNotificationCallback)LoadSettings, CFSTR("com.thomtl.spotweathersettings/settingschanged"), NULL, CFNotificationSuspensionBehaviorCoalesce);
 	LoadSettings();
 	NSLog(@"Loading SpotWeather!");
 }
-
+static void RespringDevice()
+{
+	[[%c(FBSystemService) sharedInstance] exitAndRelaunch:YES];
+}
 static void LoadSettings()
 {
     NSMutableDictionary *prefs = [[NSMutableDictionary alloc] initWithContentsOfFile:@"/var/mobile/Library/Preferences/com.thomtl.spotweathersettings.plist"];
