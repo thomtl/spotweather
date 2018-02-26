@@ -12,10 +12,12 @@ static CGFloat offsetX = 0;
 	LoadSettings();
 	NSLog(@"Loading SpotWeather!");
 }
+
 static void RespringDevice()
 {
 	[[%c(FBSystemService) sharedInstance] exitAndRelaunch:YES];
 }
+
 static void LoadSettings()
 {
     NSMutableDictionary *prefs = [[NSMutableDictionary alloc] initWithContentsOfFile:@"/var/mobile/Library/Preferences/com.thomtl.spotweathersettings.plist"];
@@ -43,6 +45,10 @@ static void LoadSettings()
 %hook WATodayPadView
 - (void)layoutSubviews {
 	%orig;
+	if(offsetY == 0 && offsetX == 0)
+	{
+		return;
+	}
 	if(enabled == YES)
 	{
 		if (self.conditionsLabel) 
