@@ -5,13 +5,6 @@ static BOOL enabled = YES;
 static CGFloat offsetY = 20;
 static CGFloat offsetX = 0;
 
-@interface WATodayPadView : UIView
-	@property (nonatomic,retain) UIView * locationLabel;
-	@property (nonatomic,retain) UIView * conditionsLabel;
-	@property (nonatomic,retain) UIView * conditionsImageView;
-	@property (nonatomic,retain) UIView * temperatureLabel; 
-@end
-
 %ctor
 {
 	CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), NULL, (CFNotificationCallback)LoadSettings, CFSTR("com.thomtl.spotweathersettings/settingschanged"), NULL, CFNotificationSuspensionBehaviorCoalesce);
