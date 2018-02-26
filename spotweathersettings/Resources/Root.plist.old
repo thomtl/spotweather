@@ -20,8 +20,8 @@
 		</dict>
 		<dict>
 			<key>cell</key>
-			<string>PSGroupCell</string>
-			<key>footerText</key>
+			<string>PSStaticTextCell</string>
+			<key>label</key>
 			<string>The Y Offset of the weather object.</string>
 		</dict>
 		<dict>
@@ -44,8 +44,8 @@
 		</dict>
 		<dict>
 			<key>cell</key>
-			<string>PSGroupCell</string>
-			<key>footerText</key>
+			<string>PSStaticTextCell</string>
+			<key>label</key>
 			<string>The X Offset of the weather object.</string>
 		</dict>
 		<dict>
@@ -68,7 +68,9 @@
 		</dict>
 		<dict>
 			<key>cell</key>
-			<string>PSGroupCell</string>
+			<string>PSStaticTextCell</string>
+			<key>label</key>
+			<string>Respring To apply changes.</string>
 		</dict>
 		<dict>
             <key>cell</key>             
