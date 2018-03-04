@@ -57,6 +57,7 @@ static void LoadSettings()
 			_center.y =  (self.conditionsLabel.center.y + offsetY);
 			_center.x =  (self.conditionsLabel.center.x + offsetX);
 			self.conditionsLabel.center = _center;
+			self.conditionsLabel.hidden = YES;
 		}
 		if (self.locationLabel) 
 		{
@@ -64,6 +65,7 @@ static void LoadSettings()
 			_center.y =  (self.locationLabel.center.y + offsetY);
 			_center.x =  (self.locationLabel.center.x + offsetX);
 			self.locationLabel.center = _center;
+			self.locationLabel.hidden = YES;
 		}
 		if(self.conditionsImageView)
 		{
@@ -71,6 +73,7 @@ static void LoadSettings()
 			_center.y =  (self.conditionsImageView.center.y + offsetY);
 			_center.x =  (self.conditionsImageView.center.x + offsetX);
 			self.conditionsImageView.center = _center;
+			self.conditionsImageView.hidden = NO;
 		}
 		if(self.temperatureLabel)
 		{
@@ -78,6 +81,7 @@ static void LoadSettings()
 			_center.y =  (self.temperatureLabel.center.y + offsetY);
 			_center.x =  (self.temperatureLabel.center.x + offsetX);
 			self.temperatureLabel.center = _center;
+			self.temperatureLabel.hidden = NO;
 		}
 	}
 }
