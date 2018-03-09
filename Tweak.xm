@@ -29,6 +29,10 @@ static void LoadSettings()
     if(prefs)
     {
         enabled = [[prefs objectForKey:@"enabled"] boolValue];
+	enableConditionImage = [[prefs objectForKey:@"enableconditionview"] boolValue];
+	enableConditionLabel = [[prefs objectForKey:@"enableconditionlabel"] boolValue];
+	enableLocationLabel = [[prefs objectForKey:@"enablelocationlabel"] boolValue];
+	enableTemperatureLabel = [[prefs objectForKey:@"enabletemperaturelabel"] boolValue];
 	offsetX = (CGFloat)[[prefs objectForKey:@"OffsetX"] doubleValue];
 	offsetY = (CGFloat)[[prefs objectForKey:@"OffsetY"] doubleValue];
     }
