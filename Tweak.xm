@@ -1,6 +1,11 @@
 #include "Tweak.h"
 
 static BOOL enabled = YES;
+static BOOL enableConditionImage = YES;
+static BOOL enableConditionLabel = NO;
+static BOOL enableLocationLabel = NO;
+static BOOL enableTemperatureLabel = YES;
+
 
 static CGFloat offsetY = 20;
 static CGFloat offsetX = 0;
@@ -57,7 +62,7 @@ static void LoadSettings()
 			_center.y =  (self.conditionsLabel.center.y + offsetY);
 			_center.x =  (self.conditionsLabel.center.x + offsetX);
 			self.conditionsLabel.center = _center;
-			self.conditionsLabel.hidden = YES;
+			self.conditionsLabel.hidden = !enableConditionLabel;
 		}
 		if (self.locationLabel) 
 		{
@@ -65,7 +70,7 @@ static void LoadSettings()
 			_center.y =  (self.locationLabel.center.y + offsetY);
 			_center.x =  (self.locationLabel.center.x + offsetX);
 			self.locationLabel.center = _center;
-			self.locationLabel.hidden = YES;
+			self.locationLabel.hidden = !enableLocationLabel;
 		}
 		if(self.conditionsImageView)
 		{
@@ -73,7 +78,7 @@ static void LoadSettings()
 			_center.y =  (self.conditionsImageView.center.y + offsetY);
 			_center.x =  (self.conditionsImageView.center.x + offsetX);
 			self.conditionsImageView.center = _center;
-			self.conditionsImageView.hidden = NO;
+			self.conditionsImageView.hidden = !enableConditionImage;
 		}
 		if(self.temperatureLabel)
 		{
@@ -81,7 +86,7 @@ static void LoadSettings()
 			_center.y =  (self.temperatureLabel.center.y + offsetY);
 			_center.x =  (self.temperatureLabel.center.x + offsetX);
 			self.temperatureLabel.center = _center;
-			self.temperatureLabel.hidden = NO;
+			self.temperatureLabel.hidden = !enableTemperatureLabel;
 		}
 	}
 }
