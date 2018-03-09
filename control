@@ -4,6 +4,14 @@ Depends: firmware (>= 10.0), firmware (<= 10.3.3), mobilesubstrate
 Version: 1.1.0
 Architecture: iphoneos-arm
 Description: A tweak that shows the current weather in the NC!
+ A tweak that shows the current weather in the NC!
+ Changelog:
+ 
+ 1.0.0: Initial Release.
+ 1.0.1: Optimization.
+ 1.0.2: Fix Some Bugs.
+ 1.1.0: Add some more Features.
+ 
 Maintainer: thomtl
 Author: thomtl
 Section: Tweaks
